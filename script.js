@@ -9,10 +9,18 @@ function renderCount() {
   countElement.textContent = count;
 }
 
-// Add the three event listeners here.
-// Expected behavior:
-// - increment button increases count by 1
-// - reset button sets count back to 0
-// - theme button toggles the `dark` class on document.body
+incrementButton.addEventListener("click", () => {
+  count += 1;
+  renderCount();
+});
+
+resetButton.addEventListener("click", () => {
+  count = 0;
+  renderCount();
+});
+
+themeButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
 
 renderCount();
