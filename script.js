@@ -40,8 +40,8 @@ themeButton.addEventListener("click", () => {
 });
 
 // Use the same pattern as the example above.
-// Which button should call `goToNextStep`?
 // Which button should call `resetChecklist`?
+// Which button should call `goToNextStep`?
 
 renderCount();
 renderSteps();
