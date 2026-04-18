@@ -1,1 +1,1 @@
-Each click should do two things: update `currentStep`, then rerender the text label and the active checklist item.
+You do not need to write the checklist logic from scratch. The three helper functions already do the work. Each button just needs one click listener that calls the right helper.

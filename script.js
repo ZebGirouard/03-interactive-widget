@@ -16,20 +16,35 @@ function renderSteps() {
   });
 }
 
-incrementButton.addEventListener("click", () => {
-  currentStep = Math.min(currentStep + 1, stepElements.length - 1);
+function goToNextStep() {
+  if (currentStep < stepElements.length - 1) {
+    currentStep += 1;
+  }
+
   renderCount();
   renderSteps();
-});
+}
 
-resetButton.addEventListener("click", () => {
+function resetChecklist() {
   currentStep = 0;
   renderCount();
   renderSteps();
-});
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
 
 themeButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+  toggleTheme();
+});
+
+incrementButton.addEventListener("click", () => {
+  goToNextStep();
+});
+
+resetButton.addEventListener("click", () => {
+  resetChecklist();
 });
 
 renderCount();
