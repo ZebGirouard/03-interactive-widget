@@ -5,8 +5,8 @@ Use JavaScript to connect button clicks to a visible checklist so the DOM stops 
 
 ## Start Here
 1. Open `index.html` in your browser.
-2. In `script.js`, make the buttons change what the page shows.
-3. Make the study checklist advance, reset, and toggle themes.
+2. In `script.js`, find the helper functions that already describe the three behaviors.
+3. Connect each button to the helper function that matches its job.
 
 ## Stretch Goals
 - Add a previous-step button.

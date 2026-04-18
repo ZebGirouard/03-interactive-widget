@@ -16,9 +16,28 @@ function renderSteps() {
   });
 }
 
-// Which button should move the active step forward?
-// Which button should send the checklist back to the beginning?
-// Which button should change the page theme?
+function goToNextStep() {
+  if (currentStep < stepElements.length - 1) {
+    currentStep += 1;
+  }
+
+  renderCount();
+  renderSteps();
+}
+
+function resetChecklist() {
+  currentStep = 0;
+  renderCount();
+  renderSteps();
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
+// Which button should call `goToNextStep`?
+// Which button should call `resetChecklist`?
+// Which button should call `toggleTheme`?
 
 renderCount();
 renderSteps();
