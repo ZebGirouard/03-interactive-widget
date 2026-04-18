@@ -1,1 +1,1 @@
-You do not need to write the checklist logic from scratch. The helper functions already do the work. Start with the completed `themeButton.addEventListener(...)` example and copy that pattern for the other two buttons.
+You do not need to write the checklist logic from scratch. The helper functions already do the work. Start with the completed `themeButton.addEventListener(...)` example, then copy that pattern for the other two buttons and change which helper function gets called.
