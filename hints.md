@@ -1,1 +1,1 @@
-If you can select the button with `document.querySelector`, you can attach behavior with `addEventListener("click", ...)`.
+After you update `currentStep`, rerender both the label and the active checklist item.

@@ -1,22 +1,31 @@
 const countElement = document.querySelector("#count");
+const stepElements = document.querySelectorAll("#steps li");
 const incrementButton = document.querySelector("#increment");
 const resetButton = document.querySelector("#reset");
 const themeButton = document.querySelector("#theme");
 
-let count = 0;
+let currentStep = 0;
 
 function renderCount() {
-  countElement.textContent = count;
+  countElement.textContent = `Step ${currentStep + 1} of ${stepElements.length}`;
+}
+
+function renderSteps() {
+  stepElements.forEach((stepElement, index) => {
+    stepElement.classList.toggle("active", index === currentStep);
+  });
 }
 
 incrementButton.addEventListener("click", () => {
-  count += 1;
+  currentStep = Math.min(currentStep + 1, stepElements.length - 1);
   renderCount();
+  renderSteps();
 });
 
 resetButton.addEventListener("click", () => {
-  count = 0;
+  currentStep = 0;
   renderCount();
+  renderSteps();
 });
 
 themeButton.addEventListener("click", () => {
@@ -24,3 +33,4 @@ themeButton.addEventListener("click", () => {
 });
 
 renderCount();
+renderSteps();
