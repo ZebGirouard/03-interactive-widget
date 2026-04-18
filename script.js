@@ -35,9 +35,13 @@ function toggleTheme() {
   document.body.classList.toggle("dark");
 }
 
+themeButton.addEventListener("click", () => {
+  toggleTheme();
+});
+
+// Use the same pattern as the example above.
 // Which button should call `goToNextStep`?
 // Which button should call `resetChecklist`?
-// Which button should call `toggleTheme`?
 
 renderCount();
 renderSteps();
