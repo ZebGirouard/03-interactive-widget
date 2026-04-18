@@ -16,11 +16,9 @@ function renderSteps() {
   });
 }
 
-// Add the three event listeners here.
-// Expected behavior:
-// - next step moves the active state to the next list item
-// - reset returns to the first step
-// - theme button toggles the `dark` class on document.body
+// Which button should move the active step forward?
+// Which button should send the checklist back to the beginning?
+// Which button should change the page theme?
 
 renderCount();
 renderSteps();
