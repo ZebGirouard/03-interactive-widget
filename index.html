@@ -9,10 +9,15 @@
   <body>
     <main class="panel">
       <p class="eyebrow">JavaScript + DOM</p>
-      <h1>Count how many times you click.</h1>
-      <p id="count">0</p>
+      <h1>Move through a study checklist.</h1>
+      <p id="count">Step 1 of 3</p>
+      <ol id="steps" class="steps">
+        <li class="active">Read the task</li>
+        <li>Make one small change</li>
+        <li>Test the result</li>
+      </ol>
       <div class="actions">
-        <button id="increment">Increment</button>
+        <button id="increment">Next step</button>
         <button id="reset">Reset</button>
         <button id="theme">Toggle theme</button>
       </div>

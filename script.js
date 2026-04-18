@@ -1,18 +1,26 @@
 const countElement = document.querySelector("#count");
+const stepElements = document.querySelectorAll("#steps li");
 const incrementButton = document.querySelector("#increment");
 const resetButton = document.querySelector("#reset");
 const themeButton = document.querySelector("#theme");
 
-let count = 0;
+let currentStep = 0;
 
 function renderCount() {
-  countElement.textContent = count;
+  countElement.textContent = `Step ${currentStep + 1} of ${stepElements.length}`;
+}
+
+function renderSteps() {
+  stepElements.forEach((stepElement, index) => {
+    stepElement.classList.toggle("active", index === currentStep);
+  });
 }
 
 // Add the three event listeners here.
 // Expected behavior:
-// - increment button increases count by 1
-// - reset button sets count back to 0
+// - next step moves the active state to the next list item
+// - reset returns to the first step
 // - theme button toggles the `dark` class on document.body
 
 renderCount();
+renderSteps();
